@@ -31,7 +31,6 @@ function CartContext({ children }: PropsWithChildren) {
       );
 
       if (alreadyInCartIndex > -1) {
-        console.log("TRIG");
         const findedItemId = Object.keys(cartItems)[alreadyInCartIndex];
         const { qty, ...itemRest } = cartItems[findedItemId];
         editItem(findedItemId, { ...itemRest, qty: qty + 1 });
